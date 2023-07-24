@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
-
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Thighza</title>
         <style>
-            /* Add your background styling here */
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
             body {
-                /* Set background properties like color, image, etc. */
+            background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(https://media.discordapp.net/attachments/960022187450974238/1132690342517428374/SPOILER_image.png) center/100% fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height:100vh;
+            margin:0;
+            padding:0;
+            font-family: 'Montserrat', sans-serif;   
             }
     
             /* Style for the counter container */
@@ -39,12 +44,11 @@
 
     <body>
         <div class="counter-container">
-            <p>Count: <span id="count">0</span></p>
+            <p>Thigh Frame Count: <span id="count">0</span></p>
             <button class="counter-button" onclick="incrementCount()">THIGHS!</button>
         </div>
     
         <script>
-            // JavaScript function to increment the count
             function incrementCount() {
                 var countElement = document.getElementById("count");
                 var currentCount = parseInt(countElement.innerHTML);
