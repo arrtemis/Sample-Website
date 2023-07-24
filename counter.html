@@ -1,5 +1,56 @@
+<!DOCTYPE html>
 <html>
-    <body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Thighza</title>
+        <style>
+            /* Add your background styling here */
+            body {
+                /* Set background properties like color, image, etc. */
+            }
+    
+            /* Style for the counter container */
+            .counter-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 24px;
+            color: #fff; /* Change the color of the text */
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            padding: 20px;
+            border-radius: 10px; /* Rounded corners */
+            }
+
+            /* Style for the button */
+            .counter-button {
+                padding: 10px 20px;
+                background-color: #007bff; /* Change the background color of the button */
+                border: none;
+                color: #fff;
+                font-size: 20px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="counter-container">
+            <p>Count: <span id="count">0</span></p>
+            <button class="counter-button" onclick="incrementCount()">THIGHS!</button>
+        </div>
+    
+        <script>
+            // JavaScript function to increment the count
+            function incrementCount() {
+                var countElement = document.getElementById("count");
+                var currentCount = parseInt(countElement.innerHTML);
+                countElement.innerHTML = currentCount + 1;
+            }
+        </script>
     </body>
+
 </html>
