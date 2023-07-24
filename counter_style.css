@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+body {
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(https://media.discordapp.net/attachments/960022187450974238/1132690342517428374/SPOILER_image.png) center/100% fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100vh;
+    margin:0;
+    padding:0;
+    font-family: 'Montserrat', sans-serif;   
+}
+
+/* Style for the counter container */
+.counter-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 24px;
+    color: #fff; /* Change the color of the text */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.buttons{
+    display:flex;
+    flex-direction: row;
+}
+
+/* Style for the button */
+.counter-button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Change the background color of the button */
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 5px;
+}
