@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sample Website</title>
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+body {
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100vh;
+    margin:0;
+    padding:0;
+    font-family: 'Montserrat', sans-serif;   
+}
+
+/* Style for the counter container */
+.counter-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 24px;
+    color: #fff; /* Change the color of the text */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.buttons{
+    display:flex;
+    flex-direction: row;
+}
+
+/* Style for the button */
+.counter-button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Change the background color of the button */
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 5px;
+}
+        </style>
+    </head>
+
+    <body>
+        <div class="counter-container">
+            <div class="counter-text">
+                <p>Current Count: <span id="count">0</span></p>
+            </div>
+            
+            <div class="buttons">
+                <button class="counter-button" onclick="incrementCount()">Add 1</button>
+                <button class="counter-button" onclick="decrementCount()">Subtract 1</button>
+                <button class="counter-button" onclick="resetCount()">Reset</button>
+            </div>
+        </div>
+    
+        <script>
+          // JavaScript function to update the count in local storage
+function updateCount(count) {
+    var countElement = document.getElementById("count");
+    countElement.innerHTML = count;
+    // Save the current count to local storage
+    localStorage.setItem('thighsCount', count);
+}
+
+// JavaScript function to increment the count
+function incrementCount() {
+    var currentCount = parseInt(localStorage.getItem('thighsCount')) || 0;
+    updateCount(currentCount + 1);
+}
+
+// JavaScript function to decrement the count
+function decrementCount() {
+    var currentCount = parseInt(localStorage.getItem('thighsCount')) || 0;
+    if (currentCount > 0) {
+        updateCount(currentCount - 1);
+    }
+}
+
+// JavaScript function to reset the count
+function resetCount() {
+    updateCount(0);
+}
+
+// On page load, retrieve the count from local storage and display it
+document.addEventListener('DOMContentLoaded', function () {
+    var countElement = document.getElementById("count");
+    var storedCount = localStorage.getItem('thighsCount');
+
+    if (storedCount !== null) {
+        countElement.innerHTML = storedCount;
+    }
+});
+        </script>
+    </body>
+
+</html>
