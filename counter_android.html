@@ -59,6 +59,7 @@ body {
             
             <div class="buttons">
                 <button class="counter-button" onclick="incrementCount()">Add 1</button>
+                <button class="counter-button" onclick="incremenTen()">Add 10</button>
                 <button class="counter-button" onclick="decrementCount()">Subtract 1</button>
                 <button class="counter-button" onclick="resetCount()">Reset</button>
             </div>
@@ -79,6 +80,11 @@ function incrementCount() {
     updateCount(currentCount + 1);
 }
 
+// JavaScript function to increment the count by 10
+function incrementCount() {
+    var currentCount = parseInt(localStorage.getItem('thighsCount')) || 0;
+    updateCount(currentCount + 10);
+}
 // JavaScript function to decrement the count
 function decrementCount() {
     var currentCount = parseInt(localStorage.getItem('thighsCount')) || 0;
